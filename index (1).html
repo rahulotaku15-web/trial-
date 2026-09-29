@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17141f">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon-192.png">
+  <title>Dungeon AR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Dungeon AR</h1>
+      <p class="sub">Milestone 1: does this phone support AR in the browser?</p>
+    </header>
+
+    <section id="verdict" class="verdict">Running checks…</section>
+
+    <ul id="checks" class="checks"></ul>
+
+    <div class="buttons">
+      <button id="btn-probe" class="primary">Test AR session</button>
+      <button id="btn-camera">Test camera only</button>
+      <button id="btn-install" hidden>Install app</button>
+      <button id="btn-copy">Copy report</button>
+    </div>
+
+    <video id="cam" playsinline muted hidden></video>
+    <p id="cam-note" class="note" hidden>
+      Camera-only fallback. The camera feed works, but nothing here is tracked to the
+      real world. This is not AR.
+    </p>
+
+    <pre id="log" aria-live="polite"></pre>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
